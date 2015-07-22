@@ -1,0 +1,14 @@
+extends ./layout.jade
+block content
+  form(action="/blog", method="POST")
+    div
+      label(for="title", placeholder="Title")
+      input(type="text", placeholder="Title", name="title")
+    div
+      label(for="category", placeholder="Category")
+      input(type="text", placeholder="Category", name="category")
+    div
+      label(for="content", placeholder="Content")
+      textarea(placeholder="Category", name="content")
+    div
+      input(type="submit", value="Post")

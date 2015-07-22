@@ -1,0 +1,11 @@
+extends ./layout.jade
+block content
+  ul
+    each blog in blogs
+      li
+        h3
+          a(href=blog.slug)= blog.title
+        em= blog.category
+        br
+        hr
+        br
