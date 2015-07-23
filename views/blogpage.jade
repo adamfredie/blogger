@@ -1,0 +1,9 @@
+extends ./layout.jade
+block content
+  div
+    a(href="/blog/#{blogs.id}/edit") Edit post 
+    a(href="/blog/#{blogs.id}", data-method="delete") Delete
+  h1= blogs.title
+  em= blogs.category
+  hr
+  p= blogs.content

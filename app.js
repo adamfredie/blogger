@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
-app.use(morgan());
+// app.use(morgan('combined'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -28,8 +28,9 @@ var Blog = mongoose.model('Blog', {
 	// all blogs /blog
 	// particular blog /blog/:slug
 	// post blog /blog
-// new blog form /blog/new
-
+  // new blog form /blog/new
+  // Edit blog form /blog/:slug/edit
+// Delete
 
 // GET all blogs
 app.get('/blog', function(req, res) {
@@ -44,14 +45,14 @@ app.get('/blog', function(req, res) {
 
 // POST blog
 app.post('/blog', function(req, res) {
-	var data = {
+	var payload = {
 		title: req.body.title,
 		content: req.body.content,
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase()
 	}
 
-	Blog(data).save(function(err) {
+	Blog(payload).save(function(err) {
 		if(err) {
 			console.log(err);
 			return
@@ -66,18 +67,51 @@ app.get('/blog/new', function(req, res) {
 });
 
 // GET particular blog
-app.get('/blog/:slug', function(req, res) {
-	var slug = req.params.slug;
+app.get('/blog/:id', function(req, res) {
+	var id = req.params.id;
 
-	Blog.find({slug: slug}, function(err, data) {
+	Blog.findById(id, function(err, data) {
 		if(err) {
 			console.log(err);
 			return;
 		}
-		res.render('blog', {blogs: data});
+		res.render('blogpage', {blogs: data});
 	});
 });
 
+app.get('/blog/:id/edit', function(req, res) {
+  var id = req.params.id;
+  Blog.findById(id, function(err, data) {
+    if(err) {
+      console.log(err);
+      return;
+    }
+    res.render('edit', {blogs: data});
+  });
+});
+
+// POST blog post
+app.post('/blog/:id', function(req, res) {
+  var id = req.params.id;
+  Blog.findById(id, function(err, data) {
+    console.log(data)
+    data.title = req.body.title;
+    data.content = req.body.content;
+    data.category = req.body.category;
+
+    data.save(function(err) {
+      if(err) {
+        console.log(err);
+        return
+      }
+      res.sendStatus(200);
+    });
+  });
+});
+
+app.get('/blog/:id/delete', function(req, res) {
+
+});
 
 // CLEAR DB
 app.get('/db/clear', function(req, res) {

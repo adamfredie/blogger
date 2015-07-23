@@ -4,7 +4,7 @@ block content
     each blog in blogs
       li
         h3
-          a(href=blog.slug)= blog.title
+          a(href="/blog/#{blog.id}")= blog.title
         em= blog.category
         br
         hr
