@@ -2,7 +2,7 @@ extends ./layout.jade
 block content
   div
     a(href="/blog/#{blogs.id}/edit") Edit post 
-    a(href="/blog/#{blogs.id}", data-method="delete") Delete
+    a(href="/blog/#{blogs.id}/delete") Delete
   h1= blogs.title
   em= blogs.category
   hr

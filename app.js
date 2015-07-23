@@ -110,7 +110,11 @@ app.post('/blog/:id', function(req, res) {
 });
 
 app.get('/blog/:id/delete', function(req, res) {
+  var id = req.params.id;
 
+  Blog.remove({_id: id}, function(err) {
+    res.send(200);
+  });
 });
 
 // CLEAR DB
