@@ -4,6 +4,7 @@ block content
     a(href="/blog/#{blogs.id}/edit") Edit post 
     a(href="/blog/#{blogs.id}/delete") Delete
   h1= blogs.title
-  em= blogs.category
-  hr
-  p= blogs.content
+  div
+    em(class="cat")= blogs.category
+    p(class="cont")= blogs.content
+    p(class="test") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae unde eos incidunt nostrum culpa laudantium eaque non quos rerum, enim, earum totam esse, facere expedita consequuntur eius voluptates quas ut.

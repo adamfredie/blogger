@@ -113,6 +113,10 @@ app.get('/blog/:id/delete', function(req, res) {
   var id = req.params.id;
 
   Blog.remove({_id: id}, function(err) {
+    if(err) {
+      console.log(err);
+      return
+    }
     res.send(200);
   });
 });
