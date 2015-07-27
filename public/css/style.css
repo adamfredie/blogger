@@ -124,7 +124,7 @@ h1.global_head {
   display: inline-block;
   width: 80%;
   float: right;
-  color: #c74747;
+  color: #b56464;
 }
 a {
   text-decoration: none;
@@ -137,8 +137,7 @@ a.post_title {
   -o-transition: 0.4s all;
   -ms-transition: 0.4s all;
   transition: 0.4s all;
-  color: #bee0ee;
-  text-shadow: 1px 1px 4px #5c5d5e;
+  color: #a0bac5;
 }
 a.post_title:hover {
   color: #353535;
@@ -160,9 +159,9 @@ h3.post_title_container {
 }
 div.footer {
   border-top: 0.2rem solid #fff;
-}
-.footer {
   padding: 3rem 0;
+  color: #b56464;
+  font-weight: 900;
 }
 h4 {
   float: right;
@@ -178,4 +177,8 @@ nav {
 li {
   display: inline;
   padding-left: 2rem;
+}
+li a {
+  color: #b56464;
+  letter-spacing: 1px;
 }
