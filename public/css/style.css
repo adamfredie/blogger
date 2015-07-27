@@ -109,13 +109,23 @@ body:after {
 body:after {
   clear: both;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    background: #f00;
+  }
+}
 ul {
   font-family: Helvetica, Arial, sans-serif;
 }
+header {
+  padding: 2rem 0;
+}
 h1.global_head {
   font: 3rem Helvetica, sans-serif;
-  padding: 6rem 3rem;
-  text-align: center;
+  text-align: right;
+  display: inline-block;
+  width: 80%;
+  float: right;
 }
 a.post_title {
   font-size: 1.2rem;
@@ -149,4 +159,16 @@ div.footer {
 }
 h4 {
   padding: 3rem 0;
+}
+.logo {
+  height: 80px;
+  display: inline-block;
+  max-width: 20%;
+}
+nav {
+  float: right;
+}
+li {
+  display: inline;
+  padding-left: 2rem;
 }
