@@ -100,6 +100,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   background: #bee0ee;
+  font-family: Helvetica, Arial, sans-serif;
 }
 body:before,
 body:after {
@@ -114,9 +115,6 @@ body:after {
     background: #f00;
   }
 }
-ul {
-  font-family: Helvetica, Arial, sans-serif;
-}
 header {
   padding: 2rem 0;
 }
@@ -127,9 +125,11 @@ h1.global_head {
   width: 80%;
   float: right;
 }
+a {
+  text-decoration: none;
+}
 a.post_title {
   font-size: 1.2rem;
-  text-decoration: none;
   letter-spacing: 0.2rem;
   -webkit-transition: 0.4s all;
   -moz-transition: 0.4s all;
@@ -157,8 +157,11 @@ h3.post_title_container {
 div.footer {
   border-top: 0.2rem solid #fff;
 }
-h4 {
+.footer {
   padding: 3rem 0;
+}
+h4 {
+  float: right;
 }
 .logo {
   height: 80px;
