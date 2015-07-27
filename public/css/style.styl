@@ -5,12 +5,12 @@ mobile = 600px
 
 // edit()
 global-reset()
-
+main_color = #BEE0EE
 
 
 body
   center(800px)
-  background(#BEE0EE)
+  background(main_color)
   font-family Helvetica, Arial, sans-serif
   +below(600px)
   	background red
@@ -28,6 +28,7 @@ h1.global_head
 	display inline-block
 	width 80%
 	float right
+	color #C74747
 
 a
 	text-decoration none
@@ -36,8 +37,10 @@ a.post_title
 	font-size 1.2rem
 	letter-spacing .2rem
 	transition .4s all
+	color main_color
+	text-shadow 1px 1px 4px #5C5D5E
 	&:hover
-		color red
+		color #353535
 		font-size 1.3rem
 
 	
@@ -45,7 +48,9 @@ em.post_category
 	font-size 1rem
 	font-style italic
 	text-transform lowercase
-
+	text-decoration underline
+    
+    
 p.post_content
 	font-size 1rem
 	padding-top 1.5rem

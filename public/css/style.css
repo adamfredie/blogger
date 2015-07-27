@@ -124,6 +124,7 @@ h1.global_head {
   display: inline-block;
   width: 80%;
   float: right;
+  color: #c74747;
 }
 a {
   text-decoration: none;
@@ -136,15 +137,18 @@ a.post_title {
   -o-transition: 0.4s all;
   -ms-transition: 0.4s all;
   transition: 0.4s all;
+  color: #bee0ee;
+  text-shadow: 1px 1px 4px #5c5d5e;
 }
 a.post_title:hover {
-  color: #f00;
+  color: #353535;
   font-size: 1.3rem;
 }
 em.post_category {
   font-size: 1rem;
   font-style: italic;
   text-transform: lowercase;
+  text-decoration: underline;
 }
 p.post_content {
   font-size: 1rem;
