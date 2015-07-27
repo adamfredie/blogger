@@ -1,11 +1,12 @@
 extends ./layout.jade
 block content
   ul
-    each blog in blogs
+    each post in blogs 
       li
-        h3
-          a(href="/blog/#{blog.id}")= blog.title
-        em= blog.category
+        h3(class="post_title_container")
+          a(class="post_title" href="/blog/#{post.id}")= post.title
+        em(class="post_category")= post.category
         br
-        hr
+        p(class="post_content")= post.content
+        br
         br

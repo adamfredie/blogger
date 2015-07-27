@@ -1,8 +1,8 @@
 extends ./layout.jade
 block content
   div
-    a(href="/blog/#{blogs.id}/edit") Edit post 
-    a(href="/blog/#{blogs.id}/delete") Delete
+    a(class="editbutton" href="/blog/#{blogs.id}/edit") Edit post 
+    a(class="deletebutton" href="/blog/#{blogs.id}/delete") Delete
   h1= blogs.title
   div
     em(class="cat")= blogs.category

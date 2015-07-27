@@ -1,24 +1,50 @@
 @import 'jeet'
 @import 'nib'
 
-mobile = 481px
+mobile = 600px
 
 // edit()
 global-reset()
 
 body
   center(800px)
+  background(#BEE0EE)
+  
 
-.cat
-  col(1/3)
-  +below(600px)
-    col(.5/1)
-    shift(1/1)
-.cont
-  col(1/3)
-  +below(600px)
-    col(.25/1)
-.test
-  col(1/3)
-  +below(600px)
-    col(.25/1)
+ul
+	font-family Helvetica, Arial, sans-serif
+
+h1.global_head
+	font 3rem Helvetica, sans-serif
+	padding 6rem 3rem
+	text-align center
+	
+a.post_title
+	font-size 1.2rem
+	text-decoration none
+	letter-spacing .2rem
+	transition .4s all
+	&:hover
+		color red
+		font-size 1.3rem
+
+	
+em.post_category
+	font-size 1rem
+	font-style italic
+	text-transform lowercase
+
+p.post_content
+	font-size 1rem
+	padding-top 1.5rem
+	color #5E5E5E
+	
+h3.post_title_container
+	padding 3rem 0rem	 
+
+div.footer
+	border-top .2rem solid #fff
+	
+h4
+	padding 3rem 0	
+

@@ -5,6 +5,7 @@ var path = require('path');
 var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
+var nib = require('nib');;
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -15,7 +16,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/bloggerDB');
+mongoose.connect('mongodb://mongodb:12345@ds033439.mongolab.com:33439/app');
+
+// Schema
+
 var Blog = mongoose.model('Blog', {
 	title: String,
 	content: String,
