@@ -1,3 +1,11 @@
+
+### Contributors
+
+Adam Fredie
+Abdul Majid Zargar
+Bassam Ismail
+
+
 ### steps
 
 - Create the blogger directory `mkdir blogger`
