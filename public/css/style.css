@@ -99,7 +99,7 @@ body {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  background: #bee0ee;
+  background: #f4f3f3;
   font-family: Helvetica, Arial, sans-serif;
 }
 body:before,
@@ -109,11 +109,6 @@ body:after {
 }
 body:after {
   clear: both;
-}
-@media only screen and (max-width: 600px) {
-  body {
-    background: #f00;
-  }
 }
 header {
   padding: 2rem 0;
@@ -138,7 +133,7 @@ a.post_title {
   -o-transition: 0.4s all;
   -ms-transition: 0.4s all;
   transition: 0.4s all;
-  color: #a0bac5;
+  color: #b2acac;
 }
 a.post_title:hover {
   color: #353535;
