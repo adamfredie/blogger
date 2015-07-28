@@ -139,6 +139,11 @@ a.post_title:hover {
   color: #353535;
   letter-spacing: 0.3rem;
 }
+.post_header {
+  color: #353535;
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+}
 em.post_category {
   font-size: 1rem;
   font-style: italic;
@@ -182,4 +187,11 @@ figure {
   max-height: 400px;
   overflow: hidden;
   margin-bottom: 2rem;
+}
+.edit_delete_wrap {
+  display: inline-block;
+  float: right;
+}
+.post_category_main {
+  display: inline-block;
 }

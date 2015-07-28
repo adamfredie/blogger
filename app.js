@@ -24,7 +24,8 @@ var Blog = mongoose.model('Blog', {
 	title: String,
 	content: String,
 	category: String,
-	slug: String
+	slug: String,
+	date: Date
 });
 
 // REST
@@ -53,7 +54,8 @@ app.post('/blog', function(req, res) {
 		title: req.body.title,
 		content: req.body.content,
 		category: req.body.category,
-		slug: slug(req.body.title).toLowerCase()
+		slug: slug(req.body.title).toLowerCase(),
+		createdAt: new Date()
 	}
 
 	Blog(payload).save(function(err) {
@@ -123,6 +125,11 @@ app.get('/blog/:id/delete', function(req, res) {
     }
     res.send(200);
   });
+});
+
+
+app.get('/about', function(req, res) {
+	res.render('about');
 });
 
 // CLEAR DB
