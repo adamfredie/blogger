@@ -11,6 +11,7 @@ A simple blog CMS made in node.js, named after the roman god, Janus.
 - Adam Fredie
 - Bassam Ismail
 
+---
 
 ### steps
 

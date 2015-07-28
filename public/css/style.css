@@ -205,3 +205,10 @@ figure {
   float: right;
   padding-left: 1rem;
 }
+.about_box {
+  padding: 4rem 0;
+  line-height: 2rem;
+}
+.cc_logo {
+  fill: #b56464;
+}
