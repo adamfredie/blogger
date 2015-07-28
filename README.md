@@ -1,9 +1,15 @@
 
+### Janus Blog CMS
+
+A simple blog CMS made in node.js, named after the roman god, Janus.
+
+---
+
 ### Contributors
 
-Adam Fredie
-Abdul Majid Zargar
-Bassam Ismail
+- Abdul Majid Zargar
+- Adam Fredie
+- Bassam Ismail
 
 
 ### steps
