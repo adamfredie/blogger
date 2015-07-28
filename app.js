@@ -6,7 +6,6 @@ var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
 
-
 var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'jade');
@@ -55,7 +54,7 @@ app.post('/blog', function(req, res) {
 		content: req.body.content,
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase(),
-		date: new Date()
+		date: new moment()
 	}
 
 	Blog(payload).save(function(err) {
