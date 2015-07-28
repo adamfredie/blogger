@@ -114,7 +114,7 @@ header {
   padding: 2rem 0;
   margin-bottom: 4rem;
 }
-h1.global_head {
+.global_head {
   font: 3rem Helvetica, sans-serif;
   text-align: right;
   display: inline-block;
@@ -125,7 +125,7 @@ h1.global_head {
 a {
   text-decoration: none;
 }
-a.post_title {
+.post_title {
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
   -webkit-transition: 0.4s all;
@@ -135,7 +135,7 @@ a.post_title {
   transition: 0.4s all;
   color: #b2acac;
 }
-a.post_title:hover {
+.post_title:hover {
   color: #353535;
   letter-spacing: 0.3rem;
 }
@@ -143,25 +143,35 @@ a.post_title:hover {
   color: #353535;
   letter-spacing: 0.3rem;
   font-size: 2rem;
+  padding: 4rem 0;
+  zoom: 1;
+}
+.post_header:after,
+.post_header:before {
+  content: "";
+  display: table;
+}
+.post_header:after {
+  clear: both;
 }
 .post_head_wrap {
   padding: 1rem 0;
 }
-em.post_category {
+.post_category {
   font-size: 1rem;
   font-style: italic;
   text-transform: lowercase;
   text-decoration: underline;
 }
-p.post_content {
+.post_content {
   font-size: 1rem;
   padding-top: 1.5rem;
   color: #5e5e5e;
 }
-h3.post_title_container {
+.post_title_container {
   padding: 3rem 0rem;
 }
-div.footer {
+.footer {
   border-top: 0.2rem solid #fff;
   padding: 3rem 0;
   color: #b56464;
@@ -193,5 +203,5 @@ figure {
 }
 .edit_delete_wrap a {
   float: right;
-  padding: 1rem 0;
+  padding-left: 1rem;
 }

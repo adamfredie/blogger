@@ -3,6 +3,15 @@
 
 mobile = 600px
 
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both
+
 // edit()
 global-reset()
 main_color = #F4F3F3
@@ -24,7 +33,7 @@ header
 	padding 2rem 0
 	margin-bottom 4rem
 
-h1.global_head
+.global_head
 	font 3rem Helvetica, sans-serif
 	// padding 6rem 3rem
 	text-align right
@@ -36,7 +45,7 @@ h1.global_head
 a
 	text-decoration none
 	
-a.post_title
+.post_title
 	font-size 1.2rem
 	letter-spacing .2rem
 	transition .4s all
@@ -52,26 +61,28 @@ a.post_title
 	color #353535
 	letter-spacing .3rem
 	font-size 2rem
+	padding 4rem 0
+	clearfix()
 	
 .post_head_wrap
 	padding 1rem 0	
 	
-em.post_category
+.post_category
 	font-size 1rem
 	font-style italic
 	text-transform lowercase
 	text-decoration underline
     
     
-p.post_content
+.post_content
 	font-size 1rem
 	padding-top 1.5rem
 	color #5E5E5E
 	
-h3.post_title_container
+.post_title_container
 	padding 3rem 0rem	 
 
-div.footer
+.footer
 	border-top .2rem solid #fff
 	padding 3rem 0
 	color #B56464
@@ -101,10 +112,11 @@ figure
 	overflow hidden
 	margin-bottom 2rem
 	
-.edit_delete_wrap a
-	// display inline-block
-	float right
-	padding  1rem 0
+.edit_delete_wrap 
+	a
+		float right
+		padding-left 1rem
+	// padding  1rem 0
 	
 .post_category_main
 	// display inline-block

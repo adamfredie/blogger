@@ -54,7 +54,7 @@ app.post('/blog', function(req, res) {
 		content: req.body.content,
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase(),
-		createdAt: new Date()
+		date: new Date()
 	}
 
 	Blog(payload).save(function(err) {
