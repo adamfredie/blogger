@@ -6,12 +6,13 @@ mobile = 600px
 // edit()
 global-reset()
 main_color = #BEE0EE
+content_font = Helvetica, Arial, sans-serif
 
 
 body
   center(800px)
   background(main_color)
-  font-family Helvetica, Arial, sans-serif
+  font-family content_font
   +below(600px)
   	background red
 
@@ -20,6 +21,7 @@ ul
 
 header
 	padding 2rem 0
+	margin-bottom 4rem
 
 h1.global_head
 	font 3rem Helvetica, sans-serif
@@ -41,7 +43,8 @@ a.post_title
 	// text-shadow 1px 1px 4px #5C5D5E
 	&:hover
 		color #353535
-		font-size 1.3rem
+		// font-size 1.3rem
+		letter-spacing .3rem
 
 	
 em.post_category
@@ -83,3 +86,8 @@ li
 	a
 		color #B56464
 		letter-spacing 1px
+		
+figure
+	max-height 400px
+	overflow hidden
+	margin-bottom 2rem

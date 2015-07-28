@@ -117,6 +117,7 @@ body:after {
 }
 header {
   padding: 2rem 0;
+  margin-bottom: 4rem;
 }
 h1.global_head {
   font: 3rem Helvetica, sans-serif;
@@ -141,7 +142,7 @@ a.post_title {
 }
 a.post_title:hover {
   color: #353535;
-  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
 }
 em.post_category {
   font-size: 1rem;
@@ -181,4 +182,9 @@ li {
 li a {
   color: #b56464;
   letter-spacing: 1px;
+}
+figure {
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
