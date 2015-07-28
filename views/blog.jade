@@ -10,6 +10,8 @@ block content
           a(class="post_title" href="/blog/#{post.id}")= post.title
         em(class="post_category")= post.category + ':'
         br
+        em(class="post_category")= post.createdAt + ':'
+        br
         p(class="post_content")= post.content
         br
         br
