@@ -1,10 +1,10 @@
 extends ./layout.jade
 block content
-  div
-    a(class="editbutton" href="/blog/#{blogs.id}/edit") Edit post 
-    a(class="deletebutton" href="/blog/#{blogs.id}/delete") Delete
-  h1= blogs.title
-  div
-    em(class="cat")= blogs.category
-    p(class="cont")= blogs.content
-    p(class="test") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae unde eos incidunt nostrum culpa laudantium eaque non quos rerum, enim, earum totam esse, facere expedita consequuntur eius voluptates quas ut.
+	div(class="post_head_wrap")
+		h1(class="post_header post_title")= blogs.title
+		div(class="edit_delete_wrap")
+			a(class="editbutton" href="/blog/#{blogs.id}/edit") Edit post
+			a(class="deletebutton" href="/blog/#{blogs.id}/delete") Delete
+			em(class="post_category_main")= blogs.category
+	p(class="main_content post_content")= blogs.content	
+

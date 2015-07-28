@@ -5,7 +5,6 @@ var path = require('path');
 var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
-var nib = require('nib');;
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -125,6 +124,11 @@ app.get('/blog/:id/delete', function(req, res) {
     }
     res.send(200);
   });
+});
+
+
+app.get('/about', function(req, res) {
+	res.render('about');
 });
 
 // CLEAR DB
