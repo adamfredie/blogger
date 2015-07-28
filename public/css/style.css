@@ -144,6 +144,9 @@ a.post_title:hover {
   letter-spacing: 0.3rem;
   font-size: 2rem;
 }
+.post_head_wrap {
+  padding: 1rem 0;
+}
 em.post_category {
   font-size: 1rem;
   font-style: italic;
@@ -188,10 +191,7 @@ figure {
   overflow: hidden;
   margin-bottom: 2rem;
 }
-.edit_delete_wrap {
-  display: inline-block;
+.edit_delete_wrap a {
   float: right;
-}
-.post_category_main {
-  display: inline-block;
+  padding: 1rem 0;
 }
