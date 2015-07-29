@@ -5,8 +5,9 @@ var path = require('path');
 var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
-
+var moment = require('moment');
 var app = express();
+
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -24,7 +25,8 @@ var Blog = mongoose.model('Blog', {
 	content: String,
 	category: String,
 	slug: String,
-	date: Date
+	date: Date,
+	fdate: String
 });
 
 // REST
@@ -54,7 +56,8 @@ app.post('/blog', function(req, res) {
 		content: req.body.content,
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase(),
-		date: new moment()
+		date: new Date(),
+		fdate: moment(new Date()).format('MMMM Do YYYY')
 	}
 
 	Blog(payload).save(function(err) {
@@ -62,7 +65,7 @@ app.post('/blog', function(req, res) {
 			console.log(err);
 			return
 		}
-		res.send(201);
+		res.sendStatus(201);
 	});
 });
 
@@ -122,7 +125,7 @@ app.get('/blog/:id/delete', function(req, res) {
       console.log(err);
       return
     }
-    res.send(200);
+    res.sendStatus(200);
   });
 });
 
@@ -136,7 +139,7 @@ app.get('/db/clear', function(req, res) {
 	Blog.remove({}, function(err) {
 		if(err)
 			console.log(err)
-		res.send(200)
+		res.sendStatus(200)
 	})
 })
 
