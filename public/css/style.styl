@@ -1,5 +1,6 @@
 @import 'jeet'
 @import 'nib'
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 
 mobile = 600px
 
@@ -15,7 +16,7 @@ clearfix()
 // edit()
 global-reset()
 main_color = #F4F3F3
-content_font = Helvetica, Arial, sans-serif
+content_font = 'Dosis', sans-serif
 head_color = #B56464
 
 
@@ -34,7 +35,7 @@ header
 	margin-bottom 4rem
 
 .global_head
-	font 3rem Helvetica, sans-serif
+	font-size 3rem
 	// padding 6rem 3rem
 	text-align right
 	display inline-block
@@ -44,43 +45,72 @@ header
 
 a
 	text-decoration none
+
+.navigation li
+			padding-left 2rem
+	
+.post_list li
+	padding 2rem 0
+	border-bottom 1px solid #666
+	&:last-child
+		border-bottom none
+
+.meta_trio
+	col(1/4, gutter:0)
+	text-transform: uppercase;
+		
 	
 .post_title
 	font-size 1.2rem
-	letter-spacing .2rem
 	transition .4s all
 	color #B2ACAC
+	font-weight 600
 	// text-shadow 1px 1px 4px #5C5D5E
 	&:hover
 		color #353535
 		// font-size 1.3rem
-		letter-spacing .3rem
+		letter-spacing .1rem
 
 
 .post_header
 	color #353535
-	letter-spacing .3rem
+	letter-spacing .1rem
 	font-size 2rem
-	padding 4rem 0
+	padding: .5rem 0 5rem 0;
+	
+.blogpost_wrap
+	padding 1rem 0	
 	clearfix()
 	
-.post_head_wrap
-	padding 1rem 0	
-	
 .post_category
-	font-size 1rem
-	font-style italic
-	text-transform lowercase
-	text-decoration underline
+    font-size: 1rem;
+    font-style: italic;
+	
 .post_date
-	float right
+	display inline-block
+	
+.blogpost_date
+	display inline-block
+	border-top 3px solid #999
+	padding-top 1rem
+	
 .post_content
 	font-size 1rem
-	padding-top 1.5rem
 	color #5E5E5E
+	col(2/4, gutter: 0)
+	text-align justify
 	
-.post_title_container
-	padding 3rem 0rem	 
+.post_content_preview
+	col(3/4, gutter: 0)
+	text-align justify
+	text-overflow ellipsis
+	display -webkit-box
+	-webkit-line-clamp 7
+	-webkit-box-orient vertical
+	overflow hidden
+	
+.post_title_h3
+	padding 2rem 0rem	 
 
 .footer
 	border-top .2rem solid #fff
@@ -99,24 +129,26 @@ nav
 	float right
 
 li
-	display inline
-	padding-left 2rem
+	display inline-block
 	
-li
-	a
-		color #B56464
-		letter-spacing 1px
+a
+	color #B56464
+	letter-spacing 1px
 		
 figure
 	max-height 400px
 	overflow hidden
 	margin-bottom 2rem
 	
-.edit_delete_wrap 
+.edit_delete_wrap
+	col(.5/4, gutter: 0)
+	shift(2.5/4)
 	a
 		float right
-		padding-left 1rem
-	// padding  1rem 0
+		padding 1rem 0
+		border-bottom 1px solid #999
+		&:hover
+			border-bottom 1px solid #333
 	
 .about_box
 	padding 4rem 0

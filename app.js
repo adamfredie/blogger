@@ -57,7 +57,7 @@ app.post('/blog', function(req, res) {
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase(),
 		date: new Date(),
-		fdate: moment(new Date()).format('MMMM Do YYYY')
+		fdate: moment(new Date()).format('MMMM Do YYYY, h:mm:ss a')
 	}
 
 	Blog(payload).save(function(err) {

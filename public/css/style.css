@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
 html,
 body,
 div,
@@ -100,7 +101,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   background: #f4f3f3;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 body:before,
 body:after {
@@ -115,7 +116,7 @@ header {
   margin-bottom: 4rem;
 }
 .global_head {
-  font: 3rem Helvetica, sans-serif;
+  font-size: 3rem;
   text-align: right;
   display: inline-block;
   width: 80%;
@@ -125,54 +126,133 @@ header {
 a {
   text-decoration: none;
 }
+.navigation li {
+  padding-left: 2rem;
+}
+.post_list li {
+  padding: 2rem 0;
+  border-bottom: 1px solid #666;
+}
+.post_list li:last-child {
+  border-bottom: none;
+}
+.meta_trio {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-transform: uppercase;
+}
+.meta_trio:before,
+.meta_trio:after {
+  content: '';
+  display: table;
+}
+.meta_trio:after {
+  clear: both;
+}
+.meta_trio:last-child {
+  margin-right: 0%;
+}
 .post_title {
   font-size: 1.2rem;
-  letter-spacing: 0.2rem;
   -webkit-transition: 0.4s all;
   -moz-transition: 0.4s all;
   -o-transition: 0.4s all;
   -ms-transition: 0.4s all;
   transition: 0.4s all;
   color: #b2acac;
+  font-weight: 600;
 }
 .post_title:hover {
   color: #353535;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
 .post_header {
   color: #353535;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
-  padding: 4rem 0;
+  padding: 0.5rem 0 5rem 0;
+}
+.blogpost_wrap {
+  padding: 1rem 0;
   zoom: 1;
 }
-.post_header:after,
-.post_header:before {
+.blogpost_wrap:after,
+.blogpost_wrap:before {
   content: "";
   display: table;
 }
-.post_header:after {
+.blogpost_wrap:after {
   clear: both;
-}
-.post_head_wrap {
-  padding: 1rem 0;
 }
 .post_category {
   font-size: 1rem;
   font-style: italic;
-  text-transform: lowercase;
-  text-decoration: underline;
 }
 .post_date {
-  float: right;
+  display: inline-block;
+}
+.blogpost_date {
+  display: inline-block;
+  border-top: 3px solid #999;
+  padding-top: 1rem;
 }
 .post_content {
   font-size: 1rem;
-  padding-top: 1.5rem;
   color: #5e5e5e;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: justify;
 }
-.post_title_container {
-  padding: 3rem 0rem;
+.post_content:before,
+.post_content:after {
+  content: '';
+  display: table;
+}
+.post_content:after {
+  clear: both;
+}
+.post_content:last-child {
+  margin-right: 0%;
+}
+.post_content_preview {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: justify;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.post_content_preview:before,
+.post_content_preview:after {
+  content: '';
+  display: table;
+}
+.post_content_preview:after {
+  clear: both;
+}
+.post_content_preview:last-child {
+  margin-right: 0%;
+}
+.post_title_h3 {
+  padding: 2rem 0rem;
 }
 .footer {
   border-top: 0.2rem solid #fff;
@@ -192,10 +272,9 @@ nav {
   float: right;
 }
 li {
-  display: inline;
-  padding-left: 2rem;
+  display: inline-block;
 }
-li a {
+a {
   color: #b56464;
   letter-spacing: 1px;
 }
@@ -204,9 +283,35 @@ figure {
   overflow: hidden;
   margin-bottom: 2rem;
 }
+.edit_delete_wrap {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 12.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+  position: relative;
+  left: 64.375%;
+}
+.edit_delete_wrap:before,
+.edit_delete_wrap:after {
+  content: '';
+  display: table;
+}
+.edit_delete_wrap:after {
+  clear: both;
+}
+.edit_delete_wrap:last-child {
+  margin-right: 0%;
+}
 .edit_delete_wrap a {
   float: right;
-  padding-left: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #999;
+}
+.edit_delete_wrap a:hover {
+  border-bottom: 1px solid #333;
 }
 .about_box {
   padding: 4rem 0;
