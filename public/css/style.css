@@ -131,7 +131,7 @@ a {
 }
 .post_list li {
   padding: 2rem 0;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #ccc;
 }
 .post_list li:last-child {
   border-bottom: none;
@@ -208,9 +208,11 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 50%;
+  width: 60%;
   margin-left: 0%;
   margin-right: 0%;
+  position: relative;
+  left: -10.3%;
   text-align: justify;
 }
 .post_content:before,
