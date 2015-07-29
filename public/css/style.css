@@ -329,5 +329,13 @@ figure {
 .icon-github-circled:before {
   font-family: janus;
   font-size: 3rem;
+  color: #4089bb;
   content: e 800;
+}
+hr {
+  width: 150px;
+  color: #fff;
+}
+.social_wrap {
+  margin-bottom: 3rem;
 }
