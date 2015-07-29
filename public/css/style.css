@@ -114,25 +114,43 @@ body:after {
 }
 header {
   padding: 2rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 .global_head {
   font-size: 3rem;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 22.5%;
+  margin-left: 0%;
+  margin-right: 0%;
+  position: relative;
+  left: 77.25%;
   text-align: right;
-  display: inline-block;
-  width: 80%;
-  float: right;
   color: #b56464;
+}
+.global_head:before,
+.global_head:after {
+  content: '';
+  display: table;
+}
+.global_head:after {
+  clear: both;
+}
+.global_head:last-child {
+  margin-right: 0%;
 }
 a {
   text-decoration: none;
 }
 .navigation li {
   padding-left: 2rem;
+  margin-top: 1.3rem;
 }
 .post_list li {
   padding: 2rem 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ab7e7e;
 }
 .post_list li:last-child {
   border-bottom: none;
@@ -142,9 +160,10 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 25%;
+  width: 26%;
   margin-left: 0%;
-  margin-right: 0%;
+  margin-right: 4%;
+  margin-left: 1rem;
   text-transform: uppercase;
 }
 .meta_trio:before,
@@ -232,7 +251,7 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 75%;
+  width: 65.99999999999999%;
   margin-left: 0%;
   margin-right: 0%;
   text-align: justify;
@@ -258,7 +277,7 @@ a {
   padding: 2rem 0rem;
 }
 .footer {
-  border-top: 0.2rem solid #fff;
+  border-top: 1px solid #ab7e7e;
   padding: 3rem 0;
   color: #b56464;
   font-weight: 900;
@@ -273,7 +292,27 @@ h4 {
   max-width: 20%;
 }
 nav {
-  float: right;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 15%;
+  margin-left: 0%;
+  margin-right: 0%;
+  position: relative;
+  left: -25.75%;
+  margin-top: 2rem;
+}
+nav:before,
+nav:after {
+  content: '';
+  display: table;
+}
+nav:after {
+  clear: both;
+}
+nav:last-child {
+  margin-right: 0%;
 }
 li {
   display: inline-block;
@@ -324,6 +363,22 @@ figure {
 .cc_logo {
   fill: #b56464;
 }
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "janus";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+}
 .icon-twitter:before,
 .icon-mail:before,
 .icon-github-circled:before {
@@ -337,5 +392,23 @@ hr {
   color: #fff;
 }
 .social_wrap {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+.user_input {
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+  margin-bottom: 0.1rem;
+}
+section {
+  zoom: 1;
+}
+section:after,
+section:before {
+  content: "";
+  display: table;
+}
+section:after {
+  clear: both;
 }

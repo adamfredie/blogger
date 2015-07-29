@@ -1,14 +1,16 @@
 extends ./layout.jade
 block content
-  form(action="/blog", method="POST")
+   div(class="clearfix") 
     div
-      label(for="title", placeholder="Title")
-      input(type="text", placeholder="Title", name="title")
-    div
-      label(for="category", placeholder="Category")
-      input(type="text", placeholder="Category", name="category")
-    div
-      label(for="content", placeholder="Content")
-      textarea(placeholder="Content", name="content")
-    div
-      input(type="submit", value="Post")
+      form(action="/blog", method="POST")
+        div
+          label(for="title", placeholder="Title")
+          input(class="user_input", type="text", placeholder="Title", name="title")
+        div
+          label(for="category", placeholder="Category")
+          input(class="user_input", type="text", placeholder="Category", name="category")
+        div
+          label(for="content", placeholder="Content")
+          textarea(class="user_input_content", placeholder="Content", name="content")
+        div
+          input(type="submit", value="Post")
