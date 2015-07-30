@@ -127,6 +127,8 @@ header {
   text-align: right;
   color: #b56464;
   padding: 1rem 0;
+  float: right;
+  display: inline-block;
 }
 a {
   text-decoration: none;
@@ -279,6 +281,7 @@ h4 {
 }
 nav {
   float: right;
+  clear: both;
 }
 li {
   display: inline-block;
