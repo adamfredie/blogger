@@ -26,7 +26,11 @@ var Blog = mongoose.model('Blog', {
 	category: String,
 	slug: String,
 	date: Date,
-	fdate: String
+	fdate: String,
+	ftime: String,
+	fday: String,
+	fmonth: String,
+	fyear: String
 });
 
 // REST
@@ -57,7 +61,13 @@ app.post('/blog', function(req, res) {
 		category: req.body.category,
 		slug: slug(req.body.title).toLowerCase(),
 		date: new Date(),
-		fdate: moment(new Date()).format('MMMM Do YYYY, h:mm:ss a')
+		fdate: moment(new Date()).format('MMMM Do YYYY'),
+		ftime: moment(new Date()).format('h:mm:ss a'),
+		fday: moment(new Date()).format('Do'),
+		fmonth: moment(new Date()).format('MMM'),
+		fyear: moment(new Date()).format('YYYY')
+
+
 	}
 
 	Blog(payload).save(function(err) {

@@ -119,7 +119,7 @@ body:after {
 }
 header {
   padding: 2rem 0;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
   overflow: hidden;
 }
 .right_wrap {
@@ -151,10 +151,9 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 26%;
+  width: 20%;
   margin-left: 0%;
   margin-right: 0%;
-  margin-left: 1rem;
   text-transform: uppercase;
 }
 .meta_trio:before,
@@ -218,12 +217,11 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 50%;
+  width: 68%;
   margin-left: 0%;
   margin-right: 0%;
-  position: relative;
-  left: -10.3%;
   text-align: justify;
+  line-height: 2rem;
 }
 .post_content:before,
 .post_content:after {
@@ -241,9 +239,10 @@ a {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 69%;
+  width: 80%;
   margin-left: 0%;
   margin-right: 0%;
+  line-height: 1.5rem;
   text-align: justify;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -262,6 +261,10 @@ a {
 }
 .post_content_preview:last-child {
   margin-right: 0%;
+}
+.post_content_preview::first-line {
+  line-height: 0rem;
+  color: #f00;
 }
 .post_title_h3 {
   padding: 2rem 0rem;
@@ -300,11 +303,10 @@ figure {
   float: left;
   clear: none;
   text-align: inherit;
-  width: 12.5%;
+  width: 10%;
   margin-left: 0%;
   margin-right: 0%;
-  position: relative;
-  left: 56.650000000000006%;
+  float: right;
 }
 .edit_delete_wrap:before,
 .edit_delete_wrap:after {
