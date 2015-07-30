@@ -16,6 +16,8 @@ clearfix()
 
 // edit()
 global-reset()
+*
+	box-sizing border-box
 main_color = #F4F3F3
 content_font = 'Dosis', sans-serif
 head_color = #B56464
@@ -26,7 +28,7 @@ body
   background(main_color)
   font-family content_font
   +below(600px)
-  	// background red
+  	// background red#E75A4D
 
 ul
 	// font-family Helvetica, Arial, sans-serif
@@ -195,8 +197,15 @@ figure
 .icon-github-circled:before	
 	font-family janus
 	font-size 3rem
-	color #4089BB
 	content \e800
+
+.icon-github-circled
+	color #333
+.icon-twitter
+	color #55acee
+.icon-mail
+	color #E75A4D	
+	
 
 
 hr
@@ -213,5 +222,4 @@ hr
 	width 100%
 	margin-bottom .1rem
 
-section
-	clearfix()	
+	

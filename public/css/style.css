@@ -91,6 +91,11 @@ td {
 a img {
   border: none;
 }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   *zoom: 1;
   width: auto;
@@ -386,8 +391,16 @@ figure {
 .icon-github-circled:before {
   font-family: janus;
   font-size: 3rem;
-  color: #4089bb;
   content: e 800;
+}
+.icon-github-circled {
+  color: #333;
+}
+.icon-twitter {
+  color: #55acee;
+}
+.icon-mail {
+  color: #e75a4d;
 }
 hr {
   width: 150px;
@@ -402,15 +415,4 @@ hr {
   padding: 0.8rem 1.5rem;
   width: 100%;
   margin-bottom: 0.1rem;
-}
-section {
-  zoom: 1;
-}
-section:after,
-section:before {
-  content: "";
-  display: table;
-}
-section:after {
-  clear: both;
 }
