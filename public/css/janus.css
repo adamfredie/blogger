@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'janus';
-  src: url('../font/janus.eot?30029963');
-  src: url('../font/janus.eot?30029963#iefix') format('embedded-opentype'),
-       url('../font/janus.woff?30029963') format('woff'),
-       url('../font/janus.ttf?30029963') format('truetype'),
-       url('../font/janus.svg?30029963#janus') format('svg');
+  src: url('../font/janus.eot?66573721');
+  src: url('../font/janus.eot?66573721#iefix') format('embedded-opentype'),
+       url('../font/janus.woff?66573721') format('woff'),
+       url('../font/janus.ttf?66573721') format('truetype'),
+       url('../font/janus.svg?66573721#janus') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'janus';
-    src: url('../font/janus.svg?30029963#janus') format('svg');
+    src: url('../font/janus.svg?66573721#janus') format('svg');
   }
 }
 */
@@ -57,3 +57,5 @@
 .icon-github-circled:before { content: '\e800'; } /* '' */
 .icon-mail:before { content: '\e801'; } /* '' */
 .icon-twitter:before { content: '\e802'; } /* '' */
+.icon-pencil:before { content: '\e803'; } /* '' */
+.icon-trash-empty:before { content: '\e804'; } /* '' */

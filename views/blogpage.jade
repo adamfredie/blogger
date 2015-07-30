@@ -6,8 +6,8 @@ block content
 			h1(class="post_header")= blogs.title
 			em(class="blogpost_date")= blogs.fdate
 		div(class="edit_delete_wrap")
-			a(class="editbutton" href="/blog/#{blogs.id}/edit") Edit post
+			a(class="editbutton icon-pencil" href="/blog/#{blogs.id}/edit") Edit
 			br
-			a(class="deletebutton" href="/blog/#{blogs.id}/delete") Delete
+			a(class="deletebutton icon-trash-empty" href="/blog/#{blogs.id}/delete") Delete
 		p(class="main_content post_content")= blogs.content	
 
