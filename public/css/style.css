@@ -122,13 +122,16 @@ header {
   margin-bottom: 8rem;
   overflow: hidden;
 }
+.right_wrap {
+  text-align: right;
+  width: 80%;
+  float: right;
+}
 .global_head {
   font-size: 3rem;
-  text-align: right;
   color: #b56464;
   padding: 1rem 0;
-  float: right;
-  display: inline-block;
+  padding-top: 0;
 }
 a {
   text-decoration: none;
@@ -276,13 +279,10 @@ h4 {
 }
 .logo {
   height: 80px;
-  display: inline-block;
   max-width: 20%;
+  float: left;
 }
-nav {
-  float: right;
-  clear: both;
-}
+nav,
 li {
   display: inline-block;
 }
@@ -370,11 +370,8 @@ figure {
   color: #e75a4d;
 }
 hr {
-  width: 150px;
+  width: 0px;
   color: #fff;
-}
-.social_wrap {
-  margin-bottom: 2rem;
 }
 .user_input {
   font-size: 1.5rem;
@@ -396,6 +393,9 @@ hr {
   border: none;
   background-color: #b56464;
   color: #fff;
+}
+.submit_button:hover {
+  cursor: pointer;
 }
 .edit_head {
   font-size: 2.5rem;

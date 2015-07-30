@@ -38,13 +38,16 @@ header
 	margin-bottom 8rem
 	overflow hidden
 
+.right_wrap
+	text-align right
+	width 80%
+	float right
+
 .global_head
 	font-size 3rem
-	text-align right
 	color #B56464
 	padding 1rem 0
-	float right
-	display inline-block
+	padding-top 0
 
 a
 	text-decoration none
@@ -132,14 +135,10 @@ h4
 
 .logo
 	height 80px
-	display inline-block
 	max-width 20%
+	float left
 nav
-	// col(-1.5/4, gutter:0)
-	// shift(.8/4)
-	// margin-top 2rem
-	float right
-	clear both
+	
 
 li
 	display inline-block
@@ -215,11 +214,11 @@ figure
 
 
 hr
-	width 150px
+	width 0px
 	color #fff
 
 .social_wrap
-	margin-bottom 2rem
+	// margin-bottom 1rem
 	
 .user_input
 	font-size 1.5rem
@@ -241,6 +240,8 @@ hr
 	border none
 	background-color head_color
 	color #fff
+	&:hover
+		cursor pointer
 
 .edit_head
 	font-size 2.5rem
