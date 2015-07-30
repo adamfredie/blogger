@@ -9,10 +9,8 @@ block content
           em(class="post_category")= post.category + ':'
           h3(class="post_title_h3")
             a(class="post_title" href="/blog/#{post.id}")= post.title
-          em(class="post_date")= post.fday
-          br
-          em(class="post_date")= post.fmonth
-          br
+          em(class="post_date")= post.fday  
+          em(class="post_date")= post.fmonth   
           em(class="post_date")= post.fyear
 
         //- br
