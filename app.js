@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://mongodb:12345@ds033439.mongolab.com:33439/app');
+mongoose.connect('mongodb://localhost:27017/app');
 
 // Schema
 
@@ -62,7 +62,7 @@ app.post('/blog', function(req, res) {
 		slug: slug(req.body.title).toLowerCase(),
 		date: new Date(),
 		fdate: moment(new Date()).format('MMMM Do YYYY'),
-		ftime: moment(new Date()).format('h:mm:ss a'),
+		ftime: moment(new Date()).format('h:mm:ss a')
 		fday: moment(new Date()).format('Do'),
 		fmonth: moment(new Date()).format('MMM'),
 		fyear: moment(new Date()).format('YYYY')
