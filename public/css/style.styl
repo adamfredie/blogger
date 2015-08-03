@@ -1,4 +1,4 @@
-@import 'jeet'
+	@import 'jeet'
 @import 'nib'
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 @import url(/css/janus.css)
@@ -52,11 +52,13 @@ header
 a
 	text-decoration none
 
-.navigation li
+.list_items
 			padding-left 2rem
 			margin-top 1.3rem
+			display inline-block
 	
 .post_list li
+	cf()
 	padding 2rem 0
 	// border-bottom 1px solid #AB7E7E
 	&:last-child
@@ -137,13 +139,14 @@ h4
 // the J logo
 
 .logo
-	height 80px
+	height 120px
 	max-width 20%
 	float left
+	border-radius 80px
 nav
 
 li
-	display inline-block
+	// display inline-block
 	
 a
 	color #B56464

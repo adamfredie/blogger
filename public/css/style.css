@@ -136,12 +136,22 @@ header {
 a {
   text-decoration: none;
 }
-.navigation li {
+.list_items {
   padding-left: 2rem;
   margin-top: 1.3rem;
+  display: inline-block;
 }
 .post_list li {
+  *zoom: 1;
   padding: 2rem 0;
+}
+.post_list li:before,
+.post_list li:after {
+  content: '';
+  display: table;
+}
+.post_list li:after {
+  clear: both;
 }
 .post_list li:last-child {
   border-bottom: none;
@@ -281,13 +291,11 @@ h4 {
   margin: 2rem 0;
 }
 .logo {
-  height: 80px;
+  height: 120px;
   max-width: 20%;
   float: left;
-}
-nav,
-li {
-  display: inline-block;
+  -webkit-border-radius: 80px;
+  border-radius: 80px;
 }
 a {
   color: #b56464;
