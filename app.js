@@ -6,6 +6,7 @@ var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
 var moment = require('moment');
+var basicAuth = require('basic-auth')
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -42,6 +43,30 @@ var Blog = mongoose.model('Blog', {
   // Edit blog form /blog/:slug/edit
 // Delete
 
+var auth = function (req, res, next) {
+  function unauthorized(res) {
+    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    return res.sendStatus(401);
+  }
+
+  var user = {
+    name: "foo",
+    pass: "pass",
+  }
+
+  var user = basicAuth(req);
+
+  if (!user || !user.name || !user.pass) {
+    return unauthorized(res);
+  };
+
+  if (user.name === 'foo' && user.pass === 'bar') {
+    return next();
+  } else {
+    return unauthorized(res);
+  };
+};
+
 // GET all blogs
 app.get('/blog', function(req, res) {
 	Blog.find({}, function(err, data) {
@@ -62,12 +87,10 @@ app.post('/blog', function(req, res) {
 		slug: slug(req.body.title).toLowerCase(),
 		date: new Date(),
 		fdate: moment(new Date()).format('MMMM Do YYYY'),
-		ftime: moment(new Date()).format('h:mm:ss a')
+		ftime: moment(new Date()).format('h:mm:ss a'),
 		fday: moment(new Date()).format('Do'),
 		fmonth: moment(new Date()).format('MMM'),
 		fyear: moment(new Date()).format('YYYY')
-
-
 	}
 
 	Blog(payload).save(function(err) {
@@ -80,7 +103,7 @@ app.post('/blog', function(req, res) {
 });
 
 // GET new blog templates
-app.get('/blog/new', function(req, res) {
+app.get('/blog/new', auth, function(req, res) {
 	res.render('new');
 });
 
