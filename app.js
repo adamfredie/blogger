@@ -6,6 +6,7 @@ var jade = require('jade');
 var bodyParser = require('body-parser');
 var slug = require('slug');
 var moment = require('moment');
+var basicAuth = require('basic-auth')
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -41,6 +42,31 @@ var Blog = mongoose.model('Blog', {
   // new blog form /blog/new
   // Edit blog form /blog/:slug/edit
 // Delete
+
+
+
+// Authentication
+
+var auth = function (req, res, next) {
+  function unauthorized(res) {
+    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    return res.sendStatus(401);
+  }
+
+  var user = basicAuth(req);
+
+  if (!user || !user.name || !user.pass) {
+    return unauthorized(res);
+  };
+
+  if (user.name === 'choo' && user.pass === 'bar') {
+    return next();
+  } else {
+    return unauthorized(res);
+  };
+};
+
+
 
 // GET all blogs
 app.get('/blog', function(req, res) {
@@ -80,7 +106,7 @@ app.post('/blog', function(req, res) {
 });
 
 // GET new blog templates
-app.get('/blog/new', function(req, res) {
+app.get('/blog/new', auth, function(req, res) {
 	res.render('new');
 });
 
@@ -97,7 +123,7 @@ app.get('/blog/:id', function(req, res) {
 	});
 });
 
-app.get('/blog/:id/edit', function(req, res) {
+app.get('/blog/:id/edit', auth, function(req, res) {
   var id = req.params.id;
   Blog.findById(id, function(err, data) {
     if(err) {
@@ -127,7 +153,7 @@ app.post('/blog/:id', function(req, res) {
   });
 });
 
-app.get('/blog/:id/delete', function(req, res) {
+app.get('/blog/:id/delete', auth, function(req, res) {
   var id = req.params.id;
 
   Blog.remove({_id: id}, function(err) {
