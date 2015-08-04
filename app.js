@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://mongodb:12345@ds033439.mongolab.com:33439/app');
+mongoose.connect('mongodb://localhost:27017/app');
 
 // Schema
 
@@ -45,7 +45,9 @@ var Blog = mongoose.model('Blog', {
 
 
 
+
 // Authentication
+
 
 var auth = function (req, res, next) {
   function unauthorized(res) {
@@ -53,18 +55,21 @@ var auth = function (req, res, next) {
     return res.sendStatus(401);
   }
 
+
   var user = basicAuth(req);
 
   if (!user || !user.name || !user.pass) {
     return unauthorized(res);
   };
 
-  if (user.name === 'choo' && user.pass === 'bar') {
+
+  if (user.name === 'foo' && user.pass === 'bar') {
     return next();
   } else {
     return unauthorized(res);
   };
 };
+
 
 
 
@@ -92,8 +97,6 @@ app.post('/blog', function(req, res) {
 		fday: moment(new Date()).format('Do'),
 		fmonth: moment(new Date()).format('MMM'),
 		fyear: moment(new Date()).format('YYYY')
-
-
 	}
 
 	Blog(payload).save(function(err) {

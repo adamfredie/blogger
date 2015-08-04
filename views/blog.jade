@@ -5,13 +5,8 @@ block content
   ul(class="post_list")
     each post in blogs 
       li
-        span(class="meta_trio")
-          em(class="post_category")= post.category + ':'
-          h3(class="post_title_h3")
-            a(class="post_title" href="/blog/#{post.id}")= post.title
-          em(class="post_date")= post.fday+' '  
-          em(class="post_date")= post.fmonth+' '
-          em(class="post_date")= post.fyear
-
-        //- br
+        small(class="post_category")= post.category
+        h3(class="post_title")
+          a(class="post_title" href="/blog/#{post.id}")= post.title
+        small(class="post_date") #{post.fday} #{post.fmonth} #{post.fyear}
         p(class="post_content_preview")= post.content
